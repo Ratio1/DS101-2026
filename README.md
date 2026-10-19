@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> **Important announcement:** There is no class on **19 October 2026**. The next class is
+> on **26 October 2026 at 16:00**, as usual, in the same classroom.
+
 # DS101 - Data Science Architects, 2026-2027
 
 DS101 is a graduate course that moves from Data Science fundamentals to neural,
