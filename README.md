@@ -1,6 +1,14 @@
 > [!IMPORTANT]
-> **Important announcement:** There is no class on **19 October 2026**. The next class is
-> on **26 October 2026 at 16:00**, as usual, in the same classroom.
+> **Important announcement:** The class on **26 October 2026 at 16:00** will be held
+> **online via Microsoft Teams**. Please sign up for the course matching your year:
+>
+> - Year 1 master students: <https://curs.upb.ro/2026/course/view.php?id=2568>
+> - Year 2 master students: <https://curs.upb.ro/2026/course/view.php?id=2575>
+>
+> Teams access will be provided on Monday.
+>
+> Please share this announcement with your colleagues, as we do not yet have an
+> established communication channel with all students.
 
 # DS101 - Data Science Architects, 2026-2027
 
