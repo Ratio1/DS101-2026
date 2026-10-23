@@ -1,0 +1,17 @@
+[project]
+name = "ds101-homeworks"
+version = "0.1.0"
+description = "DS101 2026-2027 homework and practice notebooks"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "matplotlib>=3.8",
+    "scikit-learn>=1.5",
+    "jupyterlab>=4.0",
+    "ipykernel>=6.29",
+]
+
+[tool.uv]
+package = false

@@ -60,6 +60,7 @@ student-selected end-to-end project is the only 70% graded project.
 
 - `DS101 Lecture 01 ...`: approved 24-slide editable presentation; see the L01 release note below.
 - `DS101 Lecture 02 ...` through `DS101 Lecture 10 ...`: reviewed editable releases. All ten root decks are now curated.
+- `homeworks/`: per-lecture practice notebooks and data, with a uv environment and setup scripts; see `homeworks/README.md`.
 - `scripts/lecture_2026_content.py`: superseded L01-L10 specifications retained as historical context, not as the revised deck sources.
 - `scripts/build_2026_lecture_decks.py`: verifies and preserves all L01-L10 releases; no active deck is regenerated.
 - `scripts/l01_approved_release.py`: checksum and package validation for the approved L01 artifact.

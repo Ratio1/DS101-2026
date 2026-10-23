@@ -6,3 +6,6 @@ __pycache__/
 scripts/__pycache__/
 
 scripts/.ipynb_checkpoints/
+
+.venv/
+.ipynb_checkpoints/
