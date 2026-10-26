@@ -87,7 +87,7 @@ uv run jupyter lab                                 # 3. start Jupyter
 | `uv` is not recognized / command not found | Close and reopen the terminal after installing uv. On Windows, double-click `setup.bat` again. |
 | *"running scripts is disabled on this system"* | Use `setup.bat` instead of `setup.ps1`. It bypasses the policy for this one script only. |
 | Notebook says `ModuleNotFoundError` | The wrong kernel is selected. Choose **DS101 (uv)** (see VS Code above), or start Jupyter with `start_jupyter`. |
-| Download fails on a university or company network | Set the proxy first, for example `set HTTPS_PROXY=http://proxy:port` (Windows) or `export HTTPS_PROXY=http://proxy:port`. |
+| Download fails on a university or company network | Set the proxy first, then run setup **in the same window**: `set HTTPS_PROXY=http://proxy:port` then `setup.bat` (Windows cmd), `$env:HTTPS_PROXY="http://proxy:port"` then `.\setup.bat` (PowerShell), or `export HTTPS_PROXY=http://proxy:port` (Linux/macOS). Double-clicking `setup.bat` does not see the proxy. |
 | `FileNotFoundError: data/...` | Open the notebook from its own `lecture_N` folder. Jupyter runs each notebook from its folder. |
 | Something is broken and you want a clean start | Delete `homeworks/.venv` and run setup again. |
 

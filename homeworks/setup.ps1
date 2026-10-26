@@ -22,9 +22,11 @@ if (-not (Get-Command uv -ErrorAction SilentlyContinue)) {
 
 Write-Host "Creating the environment in $PSScriptRoot\.venv ..."
 uv sync
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 Write-Host "Registering the Jupyter kernel 'ds101' ..."
 uv run python -m ipykernel install --user --name ds101 --display-name "DS101 (uv)"
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 Write-Host ""
 Write-Host "Done. Start Jupyter with:"

@@ -485,7 +485,7 @@ accounts, plus one C1 account, into one group: a recency gap of about 50 days is
 counts too, and recent and lapsed accounts are separated. Same data, same algorithm, different units,
 different groups.
 
-The guard at the top of the cell stops if any account has zero or negative **net M** (credits larger
+The guard at the top of the k-means cell (section 8) stops if any account has zero or negative **net M** (credits larger
 than purchases): such accounts need a reviewed policy, not a silent `log`. The model is fit on all 84 accounts because this is **description**, not
 prediction. For a predictive model, fit the scaler on training data only.
 """),
@@ -715,7 +715,7 @@ def train_lookup(seed, scale=0.3, steps=3000, lr=0.05, verbose=False):
         grad = 2 * err / err.size        # d(mean squared error) / d(pred)
         gE, gW, gb = grad @ W.T, E.T @ grad, grad.sum(axis=0)
         # Each row of E receives the gradient of only its own account (1/84 of the loss), so its
-        # gradient is 84 times smaller than W's. A per-row step size of lr * 84 compensates:
+        # gradient is roughly 84 times smaller than W's. A per-row step size of lr * 84 compensates:
         # every account vector learns as fast as if it were trained on its own.
         E -= lr * len(X) * gE
         W -= lr * gW
@@ -1089,8 +1089,8 @@ print(rfm_h6.groupby("cluster")["aov_cu"].describe()[["count", "min", "50%", "ma
 **Answer.**
 
 - **Feature.** Average order value (AOV): gross purchase value divided by the number of purchase
-  orders, in CU per order, over 1 Jan - 31 Mar 2026. Unlike "March share", it is not fixed by the
-  definition of R, so it can show something R, F and M do not show directly.
+  orders, in CU per order, over 1 Jan - 31 Mar 2026. It is close to M / F, but neither feature fixes
+  it on its own, so it can show something R, F and M do not show directly.
 - **Finding.** C1 accounts do not only order more often; they also order more **per order**: median
   AOV is about 364 CU for C1, 226 CU for C2 and 142 CU for C3. C2 and C3 have almost the same net M
   (about 550 CU), but C2 reaches it with fewer, larger orders. The ranges overlap (C1 227-579,
