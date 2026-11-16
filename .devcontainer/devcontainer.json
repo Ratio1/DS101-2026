@@ -4,6 +4,7 @@
   "image": "aidamian/ds101_2024",
 
   "runArgs": [
+    
     // "--gpus=all",
     "--hostname",
     "ds101-devcont"    
